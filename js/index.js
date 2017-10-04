@@ -95,7 +95,7 @@ $ (window).load (function () {
         }
     });
     //调用sd_$运行视频背景功能
-    sd_$.Bvideo ("#sd_video","./sources/Sugar");
+    sd_$.Bvideo ("#sd_video","http://124.193.120.174/hc.yinyuetai.com/uploads/videos/common/9E46015B41450C57C4CCAE3C0B87E8DC");
     //调用遮罩层
     $(".sd_mask").css("background-color","rgba(0,0,0,0.5)");
     // //调用载入动画
