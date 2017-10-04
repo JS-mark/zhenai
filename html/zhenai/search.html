@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>珍爱列表搜索页面</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/search.css"/>
+    <link href="./../../favicon.ico" type="image/x-icon" rel="icon" />
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/zhenai_search.js"></script>
+</head>
+
+<body>
+    <!--搜索页面上部-->
+    <!--<div class="header"></div>-->
+    <div class="center w">
+        <div class="center_top">
+            <div class="center_top_up">
+                <a href="#" class="icon_wrong"></a>
+                <ul class>
+                    <li>已选条件：</li>
+                    <li>女士</li>
+                    <li>18至27岁</li>
+                    <li>天津</li>
+                    <li>未婚</li>
+                </ul>
+                <span >展开更多条件</span>
+                <i></i>
+                <input  type="text" id="ct_ipnut" value="ID昵称搜索"/>
+                <a href="#" class="search_icon"></a>
+            </div>
+            <div class="center_top_down">
+                <ul>
+                    <li><a href="#" class="hot">热门标签</a></li>
+                    <li><a href="#">已认证</a></li>
+                    <li><a href="#">天生一对</a></li>
+                    <li><a href="#">谁在找我</a></li>
+                    <li><a href="#" class="stu">高学历</a></li>
+                    <li><a href="#">高收入</a></li>
+                    <li><a href="#">魅力女</a></li>
+                    <li><a href="#">公务员 </a></li>
+                    <li><a href="#">有房一族</a></li>
+                    <li><a href="#">有车一族</a></li>
+                </ul>
+                <div class="button">
+                    <span id="ct_button">搜索</span>
+                </div>
+            </div>
+        </div>
+        <div class="search_short w">
+            <div class="search_short_l selected">
+                <ul>
+                    <li class="main active"><a href="#">默认排序</a></li>
+                    <li class="main"><a href="#">年龄 </a></li>
+                    <li class="main"><a href="#">诚信值</a></li>
+                    <li class="main"><a href="#">收入</a></li>
+                </ul>
+            </div>
+        </div>
+
+    <!--<div class="header"></div>-->
+    <!-- 瀑布流  -->
+    <div class="waterfull">
+        <div class="container clearfix" id="waterfull-con">
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img"><img src="images/item1.jpg">
+                        <div class="photo-mask">
+                            <div class="star"><img src="images/star.png" alt=""></div>
+                            <p class="first">
+                                开通星级特权
+                            </p>
+                            <p class="last">把自己放在搜索第一位</p>
+                        </div>
+                    </div>
+                    <div class="item-info-wrap">
+                        <div class="item-info">
+                            <p class="item-info-tit">
+                                <span class="vip-name">会员1...</span>
+                                <i class="flag-vip"></i>
+                                <i class="flag-zx"></i>
+                                <span class="vip-dely">在线</span>
+                            </p>
+                            <p class="item-info-area">
+                                35岁 上海徐汇区 未婚 162cm
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img"><img src="images/item2.jpg">
+                        <div class="how">
+                            <i></i> 打招呼
+                        </div>
+                    </div>
+                    <div class="item-info-wrap">
+                        <div class="item-info">
+                            <p class="item-info-tit">
+                                <span class="vip-name">Vicky</span>
+                                <i class="flag-zx" title="珍心会员"></i>
+                                <i class="ico_money" title="高收入"></i>
+                                <i class="ico_house" title="有房"></i>
+                                <i class="ico_car"></i>
+                                <span class="vip-dely">在线</span>
+                            </p>
+                            <p class="item-info-area">
+                              29岁 上海松江区 未婚 165CM
+                            </p>
+                        </div>
+                        <div class="item-info-bottom">
+                            <b>内心独白：</b>
+                            <span>
+                        	 	寻找：年龄28-35岁，身高175...
+                        	 </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img"><img src="images/item3.jpg">
+                        <div class="how">
+                            <i></i> 打招呼
+                        </div>
+                    </div>
+                    <div class="item-info-wrap">
+                        <div class="item-info">
+                            <p class="item-info-tit">
+                                <span class="vip-name">玉琪</span>
+                                <i class="flag-zx" title="珍心会员"></i>
+                                <i class="flag-star"></i>
+                                <i class="ico_money" title="高收入"></i>
+                                <i class="ico_house" title="有房"></i>
+                                <span class="vip-dely">在线</span>
+                            </p>
+                            <p class="item-info-area">
+                                30岁 上海浦东新区 未婚 158CM
+                            </p>
+                        </div>
+                        <div class="item-info-bottom">
+                            <b>内心独白：</b>
+                            <span>
+                        	 	喜欢安静淡然，喜欢看书练字，偶尔做...
+                        	 </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img"><img src="images/item4.jpg">
+                        <div class="how">
+                            <i></i> 打招呼
+                        </div>
+                    </div>
+                    <div class="item-info-wrap">
+                        <div class="item-info">
+                            <p class="item-info-tit">
+                                <span class="vip-name">Hel...</span>
+                                <i class="flag-zx" title="珍心会员"></i>
+                                <i class="flag-star"></i>
+                                <i class="ico_money" title="高收入"></i>
+                                <i class="ico_house" title="有房"></i>
+                                <span class="vip-dely">在线</span>
+                            </p>
+                            <p class="item-info-area">
+                               29岁 上海松江区 未婚 168CM
+                            </p>
+                        </div>
+                        <div class="item-info-bottom">
+                            <b>内心独白：</b>
+                            <span>
+                        	 	只愿得一人心，白首不相离。你若不离...
+                        	 </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img" style="margin:0;"><img src="images/item5.jpg">
+
+                    </div>
+
+                </a>
+            </div>
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img"><img src="images/item6.jpg">
+                        <div class="how">
+                            <i></i> 打招呼
+                        </div>
+                    </div>
+                    <div class="item-info-wrap">
+                        <div class="item-info">
+                            <p class="item-info-tit">
+                                <span class="vip-name">Cutie</span>
+                                <i class="flag-zx" title="珍心会员"></i>
+                                <i class="flag-star"></i>
+                                <i class="ico_money" title="高收入"></i>
+                                <i class="ico_house" title="有房"></i>
+                                <span class="vip-dely">在线</span>
+                            </p>
+                            <p class="item-info-area">
+                               25岁 上海黄浦区 未婚 165CM
+                            </p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img"><img src="images/item7.jpg">
+                        <div class="how">
+                            <i></i> 打招呼
+                        </div>
+                    </div>
+                    <div class="item-info-wrap">
+                        <div class="item-info">
+                            <p class="item-info-tit">
+                                <span class="vip-name">木偶</span>
+                                <i class="flag-zx" title="珍心会员"></i>
+                                <i class="flag-star"></i>
+                                <i class="ico_money" title="高收入"></i>
+                                <i class="ico_house" title="有房"></i>
+                                <span class="vip-dely">在线</span>
+                            </p>
+                            <p class="item-info-area">
+                                29岁 上海普陀区 未婚 168CM
+                            </p>
+                        </div>
+                        <div class="item-info-bottom">
+                            <b>内心独白：</b>
+                            <span>
+                        	 	希望所有事情都长胖一样简单！愿所有...
+                        	 </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img"><img src="images/item8.jpg">
+                        <div class="how">
+                            <i></i> 打招呼
+                        </div>
+                    </div>
+                    <div class="item-info-wrap">
+                        <div class="item-info">
+                            <p class="item-info-tit">
+                                <span class="vip-name">会员1...</span>
+                                <i class="flag-zx" title="珍心会员"></i>
+                                <i class="flag-star"></i>
+                                <i class="ico_money" title="高收入"></i>
+                                <i class="ico_house" title="有房"></i>
+                                <span class="vip-dely">在线</span>
+                            </p>
+                            <p class="item-info-area">
+                                35岁 上海徐汇区 未婚 162cm
+                            </p>
+                        </div>
+                        <div class="item-info-bottom">
+                            <b>内心独白：</b>
+                            <span>
+                        	 	温暖的江南女子。性格热情、率真、开...
+                        	 </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img"><img src="images/item9.jpg">
+                        <div class="how">
+                            <i></i> 打招呼
+                        </div>
+                    </div>
+                    <div class="item-info-wrap">
+                        <div class="item-info">
+                            <p class="item-info-tit">
+                                <span class="vip-name">会员1...</span>
+                                <i class="flag-zx" title="珍心会员"></i>
+                                <i class="flag-star"></i>
+                                <i class="ico_money" title="高收入"></i>
+                                <i class="ico_house" title="有房"></i>
+                                <span class="vip-dely">在线</span>
+                            </p>
+                            <p class="item-info-area">
+                                35岁 上海徐汇区 未婚 162cm
+                            </p>
+                        </div>
+                        <div class="item-info-bottom">
+                            <b>内心独白：</b>
+                            <span>
+                        	 	温暖的江南女子。性格热情、率真、开...
+                        	 </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img"><img src="images/item10.jpg">
+                        <div class="how">
+                            <i></i> 打招呼
+                        </div>
+                    </div>
+                    <div class="item-info-wrap">
+                        <div class="item-info">
+                            <p class="item-info-tit">
+                                <span class="vip-name">会员1...</span>
+                                <i class="flag-zx" title="珍心会员"></i>
+                                <i class="flag-star"></i>
+                                <i class="ico_money" title="高收入"></i>
+                                <i class="ico_house" title="有房"></i>
+                                <span class="vip-dely">在线</span>
+                            </p>
+                            <p class="item-info-area">
+                                35岁 上海徐汇区 未婚 162cm
+                            </p>
+                        </div>
+                        <div class="item-info-bottom">
+                            <b>内心独白：</b>
+                            <span>
+                        	 	温暖的江南女子。性格热情、率真、开...
+                        	 </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="ph-item">
+                <a href="javascript:;">
+                    <div class="item-img"><img src="images/item11.jpg">
+                        <div class="how">
+                            <i></i> 打招呼
+                        </div>
+                    </div>
+                    <div class="item-info-wrap">
+                        <div class="item-info">
+                            <p class="item-info-tit">
+                                <span class="vip-name">会员1...</span>
+                                <i class="flag-zx" title="珍心会员"></i>
+                                <i class="flag-star"></i>
+                                <i class="ico_money" title="高收入"></i>
+                                <i class="ico_house" title="有房"></i>
+                                <span class="vip-dely">在线</span>
+                            </p>
+                            <p class="item-info-area">
+                                35岁 上海徐汇区 未婚 162cm
+                            </p>
+                        </div>
+                        <div class="item-info-bottom">
+                            <b>内心独白：</b>
+                            <span>
+                        	 	温暖的江南女子。性格热情、率真、开...
+                        	 </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!--<div class="container clearfix" id="waterfull-con2">-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item1.jpg">-->
+                        <!--<div class="photo-mask">-->
+                            <!--<div class="star"><img src="images/star.png" alt=""></div>-->
+                            <!--<p class="first">-->
+                                <!--开通星级特权-->
+                            <!--</p>-->
+                            <!--<p class="last">把自己放在搜索第一位</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-vip"></i>-->
+                                <!--<i class="flag-zx"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item2.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">Vicky</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<i class="ico_car"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                              <!--29岁 上海松江区 未婚 165CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--寻找：年龄28-35岁，身高175...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item3.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">玉琪</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--30岁 上海浦东新区 未婚 158CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--喜欢安静淡然，喜欢看书练字，偶尔做...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item4.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">Hel...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                               <!--29岁 上海松江区 未婚 168CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--只愿得一人心，白首不相离。你若不离...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img" style="margin:0;"><img src="images/item5.jpg">-->
+
+                    <!--</div>-->
+
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item6.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">Cutie</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                               <!--25岁 上海黄浦区 未婚 165CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item7.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">木偶</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--29岁 上海普陀区 未婚 168CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--希望所有事情都长胖一样简单！愿所有...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item8.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item9.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item10.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item11.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container clearfix" id="waterfull-con3">-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item1.jpg">-->
+                        <!--<div class="photo-mask">-->
+                            <!--<div class="star"><img src="images/star.png" alt=""></div>-->
+                            <!--<p class="first">-->
+                                <!--开通星级特权-->
+                            <!--</p>-->
+                            <!--<p class="last">把自己放在搜索第一位</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-vip"></i>-->
+                                <!--<i class="flag-zx"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item2.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">Vicky</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<i class="ico_car"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                              <!--29岁 上海松江区 未婚 165CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--寻找：年龄28-35岁，身高175...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item3.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">玉琪</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--30岁 上海浦东新区 未婚 158CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--喜欢安静淡然，喜欢看书练字，偶尔做...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item4.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">Hel...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                               <!--29岁 上海松江区 未婚 168CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--只愿得一人心，白首不相离。你若不离...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img" style="margin:0;"><img src="images/item5.jpg">-->
+
+                    <!--</div>-->
+
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item6.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">Cutie</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                               <!--25岁 上海黄浦区 未婚 165CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item7.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">木偶</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--29岁 上海普陀区 未婚 168CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--希望所有事情都长胖一样简单！愿所有...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item8.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item9.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item10.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item11.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container clearfix" id="waterfull-con4">-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item1.jpg">-->
+                        <!--<div class="photo-mask">-->
+                            <!--<div class="star"><img src="images/star.png" alt=""></div>-->
+                            <!--<p class="first">-->
+                                <!--开通星级特权-->
+                            <!--</p>-->
+                            <!--<p class="last">把自己放在搜索第一位</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-vip"></i>-->
+                                <!--<i class="flag-zx"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item2.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">Vicky</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<i class="ico_car"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                              <!--29岁 上海松江区 未婚 165CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--寻找：年龄28-35岁，身高175...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item3.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">玉琪</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--30岁 上海浦东新区 未婚 158CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--喜欢安静淡然，喜欢看书练字，偶尔做...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item4.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">Hel...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                               <!--29岁 上海松江区 未婚 168CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--只愿得一人心，白首不相离。你若不离...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img" style="margin:0;"><img src="images/item5.jpg">-->
+
+                    <!--</div>-->
+
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item6.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">Cutie</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                               <!--25岁 上海黄浦区 未婚 165CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item7.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">木偶</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--29岁 上海普陀区 未婚 168CM-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--希望所有事情都长胖一样简单！愿所有...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item8.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item9.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item10.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="ph-item">-->
+                <!--<a href="javascript:;">-->
+                    <!--<div class="item-img"><img src="images/item11.jpg">-->
+                        <!--<div class="how">-->
+                            <!--<i></i> 打招呼-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info-wrap">-->
+                        <!--<div class="item-info">-->
+                            <!--<p class="item-info-tit">-->
+                                <!--<span class="vip-name">会员1...</span>-->
+                                <!--<i class="flag-zx" title="珍心会员"></i>-->
+                                <!--<i class="flag-star"></i>-->
+                                <!--<i class="ico_money" title="高收入"></i>-->
+                                <!--<i class="ico_house" title="有房"></i>-->
+                                <!--<span class="vip-dely">在线</span>-->
+                            <!--</p>-->
+                            <!--<p class="item-info-area">-->
+                                <!--35岁 上海徐汇区 未婚 162cm-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="item-info-bottom">-->
+                            <!--<b>内心独白：</b>-->
+                            <!--<span>-->
+                        	 	<!--温暖的江南女子。性格热情、率真、开...-->
+                        	 <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+        <p class="waterfullEnd" style="display: none;">已经到了最后了</p>
+        <p class="waterloading"><img src="images/loading.gif" alt="">正在加载中</p>
+    <footer>
+        <iframe src="./../public_footer.html"  frameborder="0" scrolling="no" width="100%" height="241" ></iframe>
+    </footer>
+</body>
+</html>

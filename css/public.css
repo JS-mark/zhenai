@@ -1,0 +1,428 @@
+/*
+*S.Author:  sunduo
+*C.Time:    2017/9/23 23:19
+*/
+/*固定导航栏开始*/
+.sd_navigation {
+    width: 100%;
+    height: 60px;
+    min-height: 60px;
+    position: relative;
+    z-index: 99;
+    box-shadow: 0 0 20px #000;
+    border-bottom: 1px solid rgb(204,0,125);
+    background-color: rgba(255,255,255,0.9);
+    top: 0;
+    left: 0;
+}
+.fixed {
+    position: fixed;
+}
+.sd_nav_left {
+    float: left;
+    height: 60px;
+    width: 87px;
+    background: url("./../images/logo.png") no-repeat center;
+}
+.sd_nav_left a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-indent: -999em;
+}
+.sd_nav_middle {
+    float: left;
+    height: 60px;
+    padding-left: 10px;
+    width: 300px;
+    background: url("./../images/ad-word.png") no-repeat center;
+}
+.sd_nav_right {
+    float: right;
+    height: 60px;
+    position: relative;
+}
+.sd_nav_right ul {
+    float: left;
+}
+.sd_nav_right ul li {
+    float: left;
+    text-align: center;
+    margin: 10px 8px;
+    line-height: 40px;
+    cursor: pointer;
+}
+/*按钮选中状态样式*/
+.sd_nav_right .sd_unselected {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+}
+.sd_nav_right .sd_selected {
+    background-color: rgb(204,0,125);
+    color: rgb(255,255,255);
+}
+.sd_nav_right .sd_a_selected {
+    color: rgb(204,0,125);
+}
+/*全站固定导航二级菜单*/
+.sd_subNav {
+    display: none;
+    position: absolute;
+    background-color: rgb(255,255,255);
+    width: 150px;
+    top: 80%;
+    left: 55%;
+    border-top: 3px solid rgb(204,0,125);
+}
+.sd_subNav .sd_tri {
+    position: absolute;
+    top: -11px;
+    left: 45%;
+}
+.sd_subNav .tri {
+    border: 4px dashed transparent;
+    border-bottom: 6px solid #fff;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    top: 1px;
+    left: 5px;
+}
+.sd_subNav .tri2{
+    border: 7px dashed transparent;
+    border-bottom: 9px solid rgb(204,0,125);
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -5px;
+    left: 2px;
+    overflow: hidden;
+}
+.sd_nav_menu ul {
+    padding: 8px 8px;
+}
+.sd_nav_menu ul li {
+    padding: 5px 35px;
+    margin-top: 5px;
+    line-height: 20px;
+    color: #000;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.sd_nav_menu ul li:hover {
+    background-color: rgba(204,0,125,0.4);
+    color: #fff;
+}
+    /*固定导航栏结束*/
+/*详情页导航栏开始*/
+.sd_mainNav {
+    height: 51px;
+    position: relative;
+}
+.sd_mainNav .sd_left {
+    float: left;
+    position: relative;
+}
+.sd_mainNav .sd_right {
+    float: right;
+}
+.sd_mainNav .sd_left ul li {
+    float: left;
+    height: 51px;
+    margin-left: 10px;
+    padding: 0 10px;
+}
+.sd_mainNav .sd_left ul li a {
+    font: 18px/51px "Microsoft YaHei UI";
+    color: rgb(184,156,195);
+    font-weight: 500;
+}
+.sd_mainNav .sd_right ul li {
+    float: left;
+    height: 51px;
+    margin-left: 10px;
+    padding: 0 10px;
+    line-height: 51px;
+}
+.sd_mainNav .sd_right ul li a {
+    color: rgb(184,156,195);
+    font-size: 30px;
+    text-shadow: 1px 1px 5px #000;
+}
+.sd_mainNav .sd_right ul li a:hover {
+    color: #fff;
+}
+.sd_current {
+    height: 51px;
+    background: rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px #000;
+    position: absolute;
+    border-radius: 5%;
+}
+/*详情页导航栏结束*/
+/*背景视频开始*/
+html,body {
+    height: 100%;
+}
+.box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.sd_box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.sd_video {
+    /*object-fit: cover;!*让video标签铺满父级元素*!*/
+    /*position: absolute;*/
+    z-index: 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+/*背景视频结束*/
+.sd_mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.sd_mask_bj {
+    background: rgba(0,0,0,0.5) url("./../images/mask_bg.jpg") no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+}
+/*载入动画开始*/
+.sd_loader {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+}
+.sd_loader::after,.sd_loader::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border: solid 8px transparent;
+    border-radius: 50%;
+    -webkit-animation: wiggle 1.4s linear infinite;
+    animation: wiggle 1.4s linear infinite;
+}
+.sd_loader::before,.sd_loader::before {
+    border-top-color: #4285f4;
+    border-bottom-color: #34a853;
+}
+.sd_loader::after,.sd_loader::after {
+    border-left-color: #fbbc05;
+    border-right-color: #ea4335;
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+@-webkit-keyframes wiggle {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        -webkit-transform: rotate(180deg) scale(0.5);
+        transform: rotate(180deg) scale(0.5);
+    }
+    100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
+    }
+}
+@keyframes wiggle {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        -webkit-transform: rotate(180deg) scale(0.5);
+        transform: rotate(180deg) scale(0.5);
+    }
+    100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
+    }
+}
+/*载入动画结束*/
+/*提醒框开始*/
+.sd_pop {
+    opacity: 0.6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+    word-wrap: break-word;
+    font-weight: 700;
+    font-family: "Microsoft YaHei UI";
+    z-index: 9;
+}
+/*提醒框结束*/
+/*每个盒子的标题开始*/
+.sd_public_title {
+    padding-top: 50px;
+}
+.sd_public_title p {
+    display: block;
+}
+.sd_public_title p:first-child {
+    text-align: center;
+    font: 50px "Microsoft YaHei UI";
+    color: rgb(94,94,94);
+}
+.sd_public_title p:last-child {
+    text-align: center;
+    font: 20px "Microsoft YaHei UI";
+    color: rgb(94,94,94);
+    padding: 10px 0 20px 0;
+}
+/*每个盒子的标题结束*/
+/*底部样式开始*/
+.sd_footer {
+    width: 100%;
+    background-color: #fff;
+}
+.sd_footer .sd_up {
+    height: 100px;
+    padding: 20px 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+.sd_footer .sd_up a {
+    color: #ccc;
+    line-height: 20px;
+}
+.sd_footer .sd_up a:hover {
+    color: orangered;
+}
+.sd_footer .sd_down {
+    height: 100px;
+    border-top: 1px solid #ccc;
+    padding: 20px 20px;
+}
+.sd_footer .sd_down p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #ccc;
+}
+.sd_footer .sd_down .left {
+    float: left;
+}
+.sd_footer .sd_down .right {
+    float: right;
+    text-align: right;
+}
+.sd_footer .sd_down ul li {
+    float: left;
+    margin-left: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #5e5e5e;
+}
+.sd_footer .sd_down .right i {
+    margin-top: 10px;
+}
+.sd_footer .sd_down .right i:nth-child(3) {
+    display: inline-block;
+    width: 82px;
+    height: 29px;
+    background: url("../images/rate.png") no-repeat;
+}
+.sd_footer .sd_down .right i:nth-child(4) {
+    display: inline-block;
+    width: 100px;
+    height: 29px;
+    background: url("../images/cert.png") no-repeat;
+}
+.sd_footer .sd_down .right i:nth-child(5) {
+    display: inline-block;
+    width: 133px;
+    height: 29px;
+    background: url("../images/report.jpg") no-repeat;
+}
+.sd_footer .sd_down .right i:nth-child(6) {
+    display: inline-block;
+    width: 79px;
+    height: 29px;
+    background: url("../images/report.png") no-repeat;
+}
+.sd_footer .sd_down .right i:nth-child(7) {
+    display: inline-block;
+    width: 105px;
+    height: 29px;
+    background: url("../images/licence.png") no-repeat;
+}
+/*底部样式结束*/
+
+/*底部导航开始*/
+#sd_bottom_nav {
+    position: fixed;
+    bottom: 10px;
+    width: 50px;
+    right: 10px;
+    list-style: none;
+}
+#sd_bottom_nav li {
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: rebeccapurple;
+}
+#sd_bottom_nav li:nth-child(2) {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat 0 0;
+}
+#sd_bottom_nav li:nth-child(2):hover {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat -70px 0;
+}
+#sd_bottom_nav li:nth-child(3) {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat 0 -55px;
+}
+#sd_bottom_nav li:nth-child(3):hover {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat -70px -55px;
+}
+#sd_bottom_nav li:nth-child(4) {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat 0 -111px;
+}
+#sd_bottom_nav li:nth-child(4):hover {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat -70px -111px;
+}
+#sd_bottom_nav li:nth-child(5) {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat 0 -166px;
+}
+#sd_bottom_nav li:nth-child(5):hover {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat -70px -166px;
+}
+#sd_bottom_nav li:nth-child(6) {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat 0 -221px;
+}
+#sd_bottom_nav li:nth-child(6):hover {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat -70px -221px;
+}
+#sd_bottom_nav li:nth-child(1) {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat 0 -276px;
+}
+#sd_bottom_nav li:nth-child(1):hover {
+    background: url("./../images/tool-bar2_72bfb50.png") no-repeat -70px -276px;
+}
+/*底部导航结束*/

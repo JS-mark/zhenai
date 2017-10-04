@@ -1,0 +1,449 @@
+/*
+*S.Author:  sunduo
+*C.Time:    2017/9/26 20:00
+*/
+#sd_menu {
+    margin: 0;
+    padding: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;;
+    list-style-type: none;
+    z-index: 70;
+}
+#sd_menu li {
+    font-size: 14px;
+    display: flex;
+}
+#sd_menu a {
+    flex: 1;
+    display: block;
+    width: 27px;
+    height: 27px;
+    margin-top: 10px;
+    padding: 4px;
+    background-color: rgba(150,112,166,0.4);
+    color: #333;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 50%;
+    text-align: center;
+}
+#sd_menu .active a {
+    color: #fff;
+    background-color: #333;
+}
+.sd_section_a {
+    display: block;
+    background-color: transparent !important;
+    color: rgba(204,0,125,0.5) !important;
+    font-size: 40px;
+}
+.section {
+    text-align: center;
+    font: 50px "Microsoft Yahei";
+    color: #fff;
+}
+/*突出显示样式开始*/
+.sd_img_box {
+    width: 100%;
+}
+.sd_img_box .sd_img_box_w {/*层叠版心盒子样式*/
+    width: 1190px;
+    height: 336px;
+    display: flex;
+    position: relative;
+    margin: 20px auto;
+}
+.sd_img_box ul {
+    display: none;
+}
+.sd_img_box ul:nth-child(1) {
+    flex: 2;
+    position: relative;
+}
+.sd_img_box ul:nth-child(1) li {
+    height: 332px;
+    margin: 2px 0;
+    position: relative;
+}
+.sd_img_box ul:nth-child(1) span {
+    height: 41px;
+    width: 100%;
+    background-color: rgba(153,0,153,0.7);
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font: 24px "Microsoft YaHei UI";
+    padding: 20px 0 10px 0;
+    color: #fff;
+}
+.sd_img_box ul:nth-child(2) {
+    flex: 3;
+    margin-left: 2px;
+}
+.sd_img_box ul:nth-child(2) li {
+    width: 353px;
+    height: 165px;
+    float: left;
+    margin: 2px 0 0 2px;
+    position: relative;
+}
+.sd_img_box ul li img {
+    width: 100%;
+    height: 100%;
+}
+.sd_img_box_mask {
+    display: block;
+    background-color: rgb(0,0,0);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*突出显示样式结束*/
+/*app下载盒子样式开始*/
+.sd_down_app {
+    width: 100%;
+}
+.sd_down_app_down {
+    padding: 50px;
+    /*background-color: red;*/
+    display: flex;
+    height: 473px;
+}
+.sd_down_app_down .left {
+    float: left;
+    flex: 1;
+    position: relative;
+}
+.sd_down_app_down .left i {
+    display: block;
+    width: 236px;
+    background-color: #9eff63;
+    position: absolute;
+}
+.sd_down_app_down .left i:first-child {
+    background: url("./../images/icon7-24.png") no-repeat 0 0;
+    height: 473px;
+    z-index: 2;
+    left: 0;
+}
+.sd_down_app_down .left i:last-child {
+    background: url("./../images/icon7-24.png") no-repeat -234px 0;
+    height: 397px;
+    z-index: 1;
+    top: 8%;
+    left: 0;
+}
+.sd_down_app_down .right {
+    float: right;
+    flex: 1;
+    position: relative;
+}
+.sd_down_app_down .right a:nth-child(1) {
+    background: rgb(183,174,218);
+    display: block;
+    width: 260px;
+    height: 115px;
+    position: absolute;
+    top: 21%;
+    left: 10%;
+}
+.sd_down_app_down .right a:nth-child(1) i {
+    background: url("./../images/icon5-24.png") no-repeat 0 -125px;
+    display: block;
+    width: 44px;
+    height: 52px;
+    position: absolute;
+    top: 22%;
+    left: 0;
+}
+.sd_down_app_down .right a:nth-child(1) b {
+    color: #fff;
+    position: absolute;
+    top: 36%;
+    left: 48%;
+    font: 700 20px "Microsoft YaHei UI";
+}
+.sd_down_app_down .right a:nth-child(2) {
+    background-color: rgb(183,174,218);
+    display: block;
+    width: 260px;
+    height: 115px;
+    position: absolute;
+    top: 47.5%;
+    left: 10%;
+}
+.sd_down_app_down .right a:nth-child(2) i {
+    background: url("./../images/icon5-24.png") no-repeat 0 -248px;
+    display: block;
+    width: 44px;
+    height: 52px;
+    position: absolute;
+    top: 22%;
+    left: 0;
+}
+.sd_down_app_down .right a:nth-child(2) b {
+    color: #fff;
+    position: absolute;
+    top: 36%;
+    left: 48%;
+    font: 700 20px "Microsoft YaHei UI";
+}
+.sd_down_app_down .right span:nth-child(3) {
+    display: block;
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    top: 21%;
+    left: 55.5%;
+    background-color:  #fff;
+}
+.sd_down_app_down .right span:nth-child(3) i {
+    display: inline-block;
+    background: url("./../images/icon6.png") no-repeat 0 bottom;
+    width: 132px;
+    height: 132px;
+    position: absolute;
+    top: 20%;
+    left: 23%;
+}
+.sd_down_app_down .right span:nth-child(3) p {
+    display: block;
+    position: absolute;
+    top: 78%;
+    left: 26%;
+}
+/*app下载盒子样式结束*/
+/*珍爱直播盒子样式开始*/
+.sd_liveVideo {
+    width: 100%;
+}
+.sd_liveVideo_bg {
+    height: 615px;
+    background: url("./../images/live_banner.jpg");
+}
+.sd_liveVideo_bg a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*珍爱直播盒子样式结束*/
+/*底部盒子盒子样式开始*/
+.sd_index_footer_btn {
+    height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.sd_index_footer_btn span {
+    width: 220px;
+    height: 50px;
+    background-color: rgb(239,239,239);
+    margin-left: 10px;
+    font: 600 20px "Microsoft YaHei UI";
+    padding: 20px 80px;
+    border: 2px solid orangered;
+    color: #000;
+}
+.sd_index_footer_btn_selected {
+    color: #fff !important;
+    background-color: rgb(255,91,91) !important;
+}
+/*底部盒子盒子样式结束*/
+/*珍爱服务盒子样式开始*/
+.sd_zhenaiFuWu {
+    width: 100%;
+}
+.sd_zhenaiFuWu_4span {
+    border-bottom: 1px solid #ccc;
+    height: 151px;
+    width: 100%;
+    padding: 0 20px;
+}
+.sd_zhenaiFuWu_4span .w1 {
+    display: flex;
+    height: 100%;
+}
+.sd_zhenaiFuWu_4span b {
+    font-size: 40px;
+    color: rgb(112,57,135);
+    font-weight: 700;
+    font-family: "Microsoft YaHei UI";
+}
+.sd_zhenaiFuWu_4span span {
+    display: block;
+    flex: 1;
+    margin: 10px 5px;
+    word-wrap: break-word;/*文字自动换行*/
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    color: rgb(153,153,153);
+    font-size: 18px;
+}
+.sd_zhenaiFuWu_4img {
+    margin-top: 30px;
+}
+.sd_zhenaiFuWu_4img i {
+    width: 295px;
+    height: 380px;
+    display: block;
+    float: left;
+    margin-left: 2px;
+}
+.sd_zhenaiFuWu_4img i:nth-child(1) {
+    background: url("./../images/service1_43a6b5c.jpg") no-repeat;
+}
+.sd_zhenaiFuWu_4img i:nth-child(2) {
+    background: url("./../images/service2_3de8eb4.jpg") no-repeat;
+}
+.sd_zhenaiFuWu_4img i:nth-child(3) {
+    background: url("./../images/service3_d6314d8.jpg") no-repeat;
+}
+.sd_zhenaiFuWu_4img i:nth-child(4) {
+    background: url("./../images/service4_d928265.jpg") no-repeat;
+
+}
+/*珍爱服务盒子样式结束*/
+/*tab栏盒子样式开始*/
+.sd_tab {
+    width: 100%;
+}
+.sd_tab_w {
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 435px;
+}
+.sd_tab_w ul {
+    margin: 50px auto;
+    margin-top: 0;
+    width: 100%;
+}
+.sd_tab_w ul li {
+    float: left;
+    margin-left: 10px;
+    padding: 10px 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+}
+.sd_tab_w_li_sle {
+    background-color: rgb(183,174,218) !important;
+    color: #fff !important;
+}
+.sd_tab_w div {
+    width: 1160px;
+    height: 350px;
+    display: flex;
+    margin-top: 20px;
+}
+/*左盒子里边的span*/
+.sd_tab_w .left {
+    flex: 1;
+    display: flex;
+}
+.sd_tab_w .left span:first-child {
+    flex: 2;
+    position: relative;
+    height: 100%;
+}
+.sd_tab_w .left span:first-child span p {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 18px;
+    display: none;
+    background-color: rgba(150,112,166,0.6);
+}
+.sd_tab_w .left span:last-child {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+.sd_tab_w .left span:last-child p {
+    position: absolute;
+    height: 30px;
+    width: 141px;
+    bottom: 0;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 18px;
+    display: none;
+    background-color: rgba(150,112,166,0.6);
+}
+.sd_tab_w .left span:last-child span {
+    flex: 1;
+    margin: 2px;
+    min-width: 140px;
+    max-width: 140px;
+    min-height: 172px;
+    max-height: 172px;
+    position: relative;
+    overflow: hidden;
+}
+/*右盒子里边的span*/
+.sd_tab_w .right {
+    flex: 1;
+    display: flex;
+}
+.sd_tab_w .right span:first-child {
+    flex: 2;
+    position: relative;
+    height: 100%;
+}
+.sd_tab_w .right span:first-child span p {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 18px;
+    background-color: rgba(150,112,166,0.6);
+    display: none;
+}
+.sd_tab_w .right span:last-child {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+.sd_tab_w .right span:last-child p {
+    position: absolute;
+    height: 30px;
+    width: 141px;
+    bottom: 0;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 18px;
+    background-color: rgba(150,112,166,0.6);
+    display: none;
+}
+.sd_tab_w .right span:last-child span {
+    flex: 1;
+    margin: 2px;
+    min-width: 140px;
+    max-width: 140px;
+    min-height: 172px;
+    max-height: 172px;
+    position: relative;
+    overflow: hidden;
+}
+/*tab栏盒子样式结束*/

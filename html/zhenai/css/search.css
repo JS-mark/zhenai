@@ -1,0 +1,190 @@
+/*
+Author:  Cai Ting;
+Time: 2017/9/24/21:21
+*/
+
+.header{
+    width: auto;
+    heigh:100px;
+    margin:auto 0;
+}
+/*ËÑË÷À¸¿ò¼ÜÖÐ²¿*/
+.center{
+    height:auto;
+    border: 1px solid #e2e0e0;
+}
+.center_top{
+    height: 190px;
+    padding:10px 10px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+.center_top_up{
+    position: relative;
+    height: 70px;
+    border-bottom:1px dashed #cccccc;
+}
+.center_top_up span{
+    width:100px;
+    height: 28px;
+    font-size: 12px;
+    color:#e2e0e0;
+    margin-left: 16px;
+    margin-top: 16px;
+    display: inline-block;
+    float: left;
+    /*background-color: lightcoral;*/
+}
+.center_top_up i{
+    display:block;
+    width: 18px;
+    height: 20px;
+    /*background-color: lawngreen;*/
+    background: url("../images/arrow-3_8b41e9d.png");
+    float: left;
+    margin-top: 16px;
+    margin-left:-18px;
+}
+.center_top_up input{
+    width: 153px;
+    height: 22px;
+    float: right;
+    margin-right: 20px;
+    margin-top:10px;
+    border: 1px solid #e2e0e0;
+    font-size:12px;
+    font-family: "ËÎÌå";
+    color:#646464;
+    padding-left: 5px;
+
+
+}
+.center_top_up .icon_wrong{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    display: block;
+    /*background-color: red;*/
+    background: url("../images/pin-stuff_214521e.png")-60px -39px no-repeat;
+    border-radius: 50%;
+    top:4px;
+    left:252px;
+    display: none;
+}
+.center_top_up .search_icon{
+    width:22px;
+    height: 24px;
+    background: url("../images/lar_cc6c799.png");
+    background-color:#f0f0f0;
+    display: block;
+    position:absolute;
+    top:10px;
+    right: 0px;
+
+}
+.center_top_up ul{
+    float: left;
+    width: 420px;
+    height: 50px;
+    margin-left:20px;
+    /*background-color: pink;*/
+
+}
+.center_top_up ul li{
+    width:80px;
+    height: 28px;
+    float: left;
+    background-color:#b7aeda;
+    margin-top:10px;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 28px;
+    color: #ffffff;
+}
+.center_top_up ul li:first-child{
+    background-color: #ffffff;
+    margin-right:0px;
+    color: #9f9f9f;
+}
+.center_top_down ul li{
+    float: left;
+    margin-top:24px;
+    margin-left:18px;
+    font-family: "ËÎÌå";
+}
+.center_top_down ul li a{
+   color:#999;
+}
+.center_top_down .hot{
+    font-weight:bold;
+    font-size: 14px;
+}
+.center_top_down .stu{
+    width:100px ;
+    height: 60px;
+    background-color: #63c9bc;
+    color:#ffffff;
+    font-size: 14px;
+}
+.center_top_down ul li a:hover{
+    text-decoration:underline;
+}
+.button span{
+    display: block;
+    width: 120px;
+    height: 36px;
+    background-color:#ff5b5b;
+    line-height: 36px;
+    border-radius: 2px;
+    position: absolute;
+    left:50%;
+    transform:translate(-50%);
+    margin-top: 60px;
+    text-align: center;
+    font-family: ËÎÌå;
+    font-size: 15px;
+    color:#ffffff;
+}
+.center_top_down{
+    position: relative;
+}
+.search_short{
+    /*height: 100px;*/
+    /*border: 1px solid #e2e0e0;*/
+}
+.search_short .search_short_l ul {
+    width: 310px;
+    height: 20px;
+    margin: 10px 10px;
+}
+.search_short .search_short_l ul li{
+    float: left;
+    line-height: 20px;
+    border: 1px solid #e2e0e0;
+    padding: 5px 10px;
+}
+.search_short .search_short_l ul li:nth-child(2){
+    border-left: none;
+}
+.search_short .search_short_l ul li:nth-child(3){
+    border-left: none;
+}
+.search_short .search_short_l ul li:nth-child(4){
+     border-left: none;
+ }
+.search_short .search_short_l ul li a{
+    color: #5e5e5e;
+    font-size: 14px;
+    font-family: ËÎÌå;
+}
+/*tabÀ¸*/
+.search_short_l .selected {
+    display: block;
+}
+
+.active {
+    background-color: #fff !important;
+}
+.search_short_l li {
+    display: block;
+}

@@ -1,0 +1,62 @@
+body,p,ul,ol,dl,li,dt,dd,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 14px "simsun";
+}
+img,input {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    outline-style: none;
+    vertical-align: middle;
+}
+input::-webkit-input-placeholder {
+    color: #cfcfcf;
+}
+/* 兼容谷歌浏览器 */
+input::-moz-placeholder {
+    color: #cfcfcf;
+}
+/* 兼容火狐浏览器 */
+input:-ms-input-placeholder {
+    color: #cfcfcf;
+}
+/* 兼IE浏览器 */
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    color: rgb(204,0,125);
+}
+/* 公共功能代码 */
+/* 第一种方法 */
+.clearfix:after { /* 清除浮动 */
+    content: "";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;/* 兼容IE浏览器 */
+}
+/* 第二种方法 */
+.clearfix2 {
+    content: "";
+    display: table;
+    clear: both;
+}
+.clearfix2 {
+    zoom: 1;/* 兼容IE浏览器 */
+}
+.clearcollapse {/* 清除塌陷 */
+    overflow: hidden;
+}
+/* 版心 */
+.w {
+    width: 1190px;
+    margin: 0 auto;
+}

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>珍爱网_注册页面</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/ry_zhuce.css"/>
+    <link href="./../favicon.ico" type="image/x-icon" rel="icon" />
+    <script src="./../js/plugin/jquery-1.11.1.js"></script>
+    <script src="./../js/ry_zhuce.js"></script>
+</head>
+<body>
+    <div class="ry_header">
+        <div class="ry w">
+            <a class="ry_logo" href="" title="珍爱网"></a>
+            <p class="ry_word"></p>
+            <div class="ry_tools">
+                <a class="ry_btn" href="">登录</a>
+            </div>
+        </div>
+    </div>
+    <div class="ry_main w clearfix">
+        <div class="ry_left">
+            <div class="ry_in">
+                <div class="ry_title">
+                    <h2>编辑征婚资料</h2>
+                </div>
+                <form action="1.php" method="post">
+                    <!--选择性别-->
+                    <div class="ry_box">
+                        <label>我是一位:</label>
+                        <div class="ry_genery">
+                            <a href="#"><input type="radio" name="gender">男士</a>
+                            <a href="#"><input type="radio" name="gender">女士</a>
+                        </div>
+                        <div class="ry_checkform" id="ry_checkforma">
+                            <i></i>
+                            <span>此项注册后不可修改，请慎重填写</span>
+                        </div>
+                    </div>
+                    <!--选择生日-->
+                    <div class="ry_box">
+                        <label>我的生日:</label>
+                        <div class="ry_select" id="ry_select1">
+                            <dl class="ry_year">
+                                <dt id="year">请选择</dt>
+                                <dd style="display:none;">
+                                    <input id="ry_birthyear" type="hidden">
+                                    <p>
+                                        <i>90后:</i>
+                                        <a href="">1990</a>
+                                        <a href="">1991</a>
+                                        <a href="">1992</a>
+                                        <a href="">1993</a>
+                                        <a href="">1994</a>
+                                        <a href="">1995</a>
+                                        <a href="">1996</a>
+                                        <a href="">1997</a>
+                                        <a href="">1998</a>
+                                        <a href="">1999</a>
+                                    </p>
+                                    <p>
+                                        <i>80后:</i>
+                                        <a href="">1980</a>
+                                        <a href="">1981</a>
+                                        <a href="">1982</a>
+                                        <a href="">1983</a>
+                                        <a href="">1984</a>
+                                        <a href="">1985</a>
+                                        <a href="">1986</a>
+                                        <a href="">1987</a>
+                                        <a href="">1988</a>
+                                        <a href="">1989</a>
+                                    </p>
+                                    <p>
+                                        <i>70后:</i>
+                                        <a href="">1970</a>
+                                        <a href="">1971</a>
+                                        <a href="">1972</a>
+                                        <a href="">1973</a>
+                                        <a href="">1974</a>
+                                        <a href="">1975</a>
+                                        <a href="">1976</a>
+                                        <a href="">1977</a>
+                                        <a href="">1978</a>
+                                        <a href="">1979</a>
+                                    </p>
+                                    <p>
+                                        <i>60后:</i>
+                                        <a href="">1960</a>
+                                        <a href="">1961</a>
+                                        <a href="">1962</a>
+                                        <a href="">1963</a>
+                                        <a href="">1964</a>
+                                        <a href="">1965</a>
+                                        <a href="">1966</a>
+                                        <a href="">1967</a>
+                                        <a href="">1968</a>
+                                        <a href="">1969</a>
+                                    </p>
+                                    <p>
+                                        <i>50后:</i>
+                                        <a href="">1950</a>
+                                        <a href="">1951</a>
+                                        <a href="">1952</a>
+                                        <a href="">1953</a>
+                                        <a href="">1954</a>
+                                        <a href="">1955</a>
+                                        <a href="">1956</a>
+                                        <a href="">1957</a>
+                                        <a href="">1958</a>
+                                        <a href="">1959</a>
+                                    </p>
+                                    <p>
+                                        <i>40后:</i>
+                                        <a href="">1940</a>
+                                        <a href="">1941</a>
+                                        <a href="">1942</a>
+                                        <a href="">1943</a>
+                                        <a href="">1944</a>
+                                        <a href="">1945</a>
+                                        <a href="">1946</a>
+                                        <a href="">1947</a>
+                                        <a href="">1948</a>
+                                        <a href="">1949</a>
+                                    </p>
+                                </dd>
+                            </dl>
+                            <span>年</span>
+                            <dl id="ry_month" class="ry_month">
+                                <dt id="month">请选择</dt>
+                                <dd style="display:none;">
+                                    <input id="ry_birthmonth" type="hidden">
+                                    <p>
+                                        <a href="">1</a>
+                                        <a href="">2</a>
+                                        <a href="">3</a>
+                                        <a href="">4</a>
+                                        <a href="">5</a>
+                                        <a href="">6</a>
+                                        <a href="">7</a>
+                                        <a href="">8</a>
+                                        <a href="">9</a>
+                                        <a href="">10</a>
+                                        <a href="">11</a>
+                                        <a href="">12</a>
+                                    </p>
+                                </dd>
+                            </dl>
+                            <span>月</span>
+                            <dl id="ry_day" class="ry_day">
+                                <dt id="sec">请选择</dt>
+                                <dd id="day">请先选择好年月</dd>
+                            </dl>
+                            <span>日</span>
+                        </div>
+                        <div class="ry_checkform" id="ry_checkformb" >
+                            <i></i>
+                            <span>此项注册后不可修改，请慎重填写</span>
+                        </div>
+                    </div>
+                    <!--选择地区-->
+                    <div class="ry_box">
+                        <label>所在地区:</label>
+                        <div class="ry_select" id="ry_select2">
+                            <dl class="ry_sheng">
+                                <dt id="sheng">省/直辖市</dt>
+                                <dd>
+                                    <span><a href="">北京</a></span>
+                                    <span><a href="">天津</a></span>
+                                    <span><a href="">上海</a></span>
+                                    <span><a href="">重庆</a></span>
+                                    <div class="border"></div>
+                                    <span><a href="">广东</a></span>
+                                    <span><a href="">江苏</a></span>
+                                    <span><a href="">浙江</a></span>
+                                    <span><a href="">四川</a></span>
+                                    <span><a href="">福建</a></span>
+                                    <span><a href="">山东</a></span>
+                                    <span><a href="">湖北</a></span>
+                                    <span><a href="">河北</a></span>
+                                    <span><a href="">山西</a></span>
+                                    <span><a href="">内蒙古</a></span>
+                                </dd>
+                            </dl>
+                            <span class="ry_label"></span>
+                            <dl class="ry_qu">
+                                <dt id="qu">市/区</dt>
+                                <dd id="qu1">
+                                    <span>请先选择省和直辖市</span>
+                                </dd>
+                            </dl>
+                            <span class="ry_label"></span>
+                            <dl class="ry_xian">
+                                <dt id="xian">选择区/县</dt>
+                                <dd>
+                                    <span>请先选择省和直辖市，市/区</span>
+                                </dd>
+                            </dl>
+                            <span class="ry_label"></span>
+                        </div>
+                        <div class="ry_checkform" id="ry_checkformc">
+                            <i></i>
+                            <span>此项注册后不可修改，请慎重填写</span>
+                        </div>
+                    </div>
+                    <!--选择婚姻状态-->
+                    <div class="ry_box">
+                        <label>婚姻状态:</label>
+                        <div class="ry_marry">
+                            <a href="#"><input type="radio" name="marry">未婚</a>
+                            <a href="#"><input type="radio" name="marry">离婚</a>
+                            <a href="#"><input type="radio" name="marry">丧偶</a>
+                        </div>
+                        <div class="ry_checkform" id="ry_checkformd">
+                            <i></i>
+                            <span>此项注册后不可修改，请慎重填写</span>
+                        </div>
+                    </div>
+                    <!--身高-->
+                    <div class="ry_box">
+                        <label>身高:</label>
+                        <div class="ry_ruler">
+                            <div class="ry_cur_height"></div>
+                            <div class="ry_ruler_btn"></div>
+                        </div>
+                        <div class="ry_checkform" id="ry_checkforme" >
+                            <i></i>
+                            <span>此项注册后不可修改，请慎重填写</span>
+                        </div>
+                    </div>
+                    <!--学历-->
+                    <div class="ry_box">
+                        <label>我的学历:</label>
+                        <dl class="ry_xueli">
+                            <dt>大学本科</dt>
+                            <dd>
+                                <a href="">高中及以下</a>
+                                <a href="">中专</a>
+                                <a href="">大专</a>
+                                <a href="">大学本科</a>
+                                <a href="">硕士</a>
+                                <a href="">博士</a>
+                            </dd>
+                        </dl>
+                        <div class="ry_checkform" id="ry_checkformf" >
+                            <i></i>
+                            <span>此项注册后不可修改，请慎重填写</span>
+                        </div>
+                    </div>
+                    <div class="ry_box">
+                        <label>我的月薪:</label>
+                        <dl class="ry_yuexin">
+                            <dt>请选择</dt>
+                            <dd>
+                                <a href="">请选择</a>
+                                <a href="">3000元以下</a>
+                                <a href="">3001-5000元</a>
+                                <a href="">5001-8000元</a>
+                                <a href="">8001-12000元</a>
+                                <a href="">12001-20000元</a>
+                                <a href="">20001-50000元</a>
+                                <a href="">50000元以上</a>
+                            </dd>
+                        </dl>
+                        <div class="ry_checkform" id="ry_checkformg" >
+                            <i></i>
+                            <span>此项注册后不可修改，请慎重填写</span>
+                        </div>
+                    </div>
+                    <div class="ry_todayjoin">
+                        今天已有
+                        <span>35181</span>
+                        位新会员加入珍爱网
+                    </div>
+                    <div class="ry_box">
+                        <label for="ry_inputa">我的手机号:</label>
+                        <input class="ry_input" id="ry_inputa" type="text" placeholder="请输入你的手机号"/>
+                        <div class="ry_checkform" id="ry_checkformh" >
+                            <i></i>
+                            <span>可用手机号登录，号码绝不会公开</span>
+                        </div>
+                        <div class="ry_checkform" id="ry_checkformh1" >
+                            <i></i>
+                            <span>手机号码错误</span>
+                        </div>
+                        <div class="ry_checkform_right" id="ry_checkformh2" >
+                            <i></i>
+                        </div>
+                    </div>
+
+                    <div class="ry_box">
+                        <label>创建密码:</label>
+                        <input class="ry_input" id="ry_inputb" type="password" placeholder="请输入密码">
+                        <div class="ry_checkform" id="ry_checkformi" >
+                            <i></i>
+                            <span>密码不能为空</span>
+                        </div>
+                        <div class="ry_checkform" id="ry_checkformi1" >
+                            <i></i>
+                            <span>密码格式不正确</span>
+                        </div>
+                        <div class="ry_checkform_right" id="ry_checkformi2" >
+                            <i></i>
+                        </div>
+                    </div>
+                    <div class="ry_box">
+                        <label>确认密码:</label>
+                        <input class="ry_input" id="ry_inputc" type="password" placeholder="请再输入一次密码">
+                        <div class="ry_checkform" id="ry_checkformj" >
+                            <i></i>
+                            <span>再次确认密码</span>
+                        </div>
+                        <div class="ry_checkform" id="ry_checkformj1" >
+                            <i></i>
+                            <span>确认密码错误</span>
+                        </div>
+                        <div class="ry_checkform_right" id="ry_checkformj2" >
+                            <i></i>
+                        </div>
+                    </div>
+                    <div class="ry_agree clearfix">
+                        <label>
+                            <input type="checkbox" checked="true">
+                            已阅读和同意珍爱网的
+                            <a href="#" target="_blank">服务条款</a>
+                            和
+                            <a href="#" target="_blank">信息保护政策</a>
+                            <br>
+                            并同意将本人之信息由珍爱网提供线上/线下服务使用
+                        </label>
+                    </div>
+                    <input  class="ry_btn" type="submit" value="免费注册 开启寻爱之旅">
+                </form>
+            </div>
+        </div>
+        <div class="ry_right">
+            <div class="ry_bar">
+                <div class="ry_bar_about">
+                    <img src="../images/bg2.png" alt=""/>
+                    <dl>
+                        <dt>
+                            <strong>1</strong>亿
+                        </dt>
+                        <dd>截至2016年10月，珍爱网会员注册量已经突破1亿</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <strong>12</strong>年
+                        </dt>
+                        <dd>珍爱网成立于2005年，专注婚恋12年，经验丰富</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <strong>3000</strong>位
+                        </dt>
+                        <dd>拥有庞大的专业红娘团队，3000位受过婚恋心理培训的红娘</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <strong>NO.1</strong>
+                        </dt>
+                        <dd>蝉联工信部中国婚恋行业第一品牌，获2013央视年度品牌</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <strong>47</strong>家
+                        </dt>
+                        <dd>在全国一/二线城市拥有47家专业的线下服务门店</dd>
+                    </dl>
+                </div>
+                <div class="ry_more_logins">
+                    <h2>其他登录方式：</h2>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="../images/qq.png" alt=""/>QQ登录
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/weibo.png" alt=""/>微博登录
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/baidu.png" alt=""/>百度
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/zhifubao.png" alt=""/>支付宝登录
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

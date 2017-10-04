@@ -1,0 +1,379 @@
+﻿html{
+    background-color: #F2F2F2;
+}
+/*轮播图*/
+/*第一个盒子*/
+.xs_div {
+    width: 1190px;
+    height: 220px;
+    border: 1px solid #ccc;
+    margin:  auto;
+    position: relative;
+}
+.xs_bigbox{
+    position: relative;
+}
+/*第二个盒子*/
+.xs_screen {
+    width: 1190px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.xs_screen li {
+    width: 1190px;
+    height: 220px;
+    overflow: hidden;
+    float: left;
+}
+
+.xs_screen ul {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 4760px;
+}
+
+.xs_div ol {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.xs_div ol li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.xs_div ol li.current {
+    background: orange;
+    color: #fff;
+}
+
+#xs_btn {
+    display: none;
+}
+#xs_btn span {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -20px;
+    background: #000;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.3;
+    border: 1px solid #fff;
+}
+
+#xs_btn #right {
+    right: 5px;
+    left: auto;
+}
+
+/*tab栏*/
+
+
+.wrapper {
+    float: left;
+    width: 877px;
+    margin: 0 auto;
+    margin-right: 21px;
+    background-color: #ffffff;
+
+}
+
+.tab {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    height: 43px;
+    width: 877px;
+}
+
+.tab li {
+    position: relative;
+    float: left;
+    width: 98px;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    cursor: pointer;
+    border-top: 4px solid #fff;
+}
+
+.tab span {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background: #ddd;
+    width: 1px;
+    height: 14px;
+    overflow: hidden;
+}
+
+.products {
+    position: relative;
+    width: 877px;
+    border: 1px solid #ddd;
+}
+
+.products .main {
+    /*position: relative;*/
+    float: left;
+    display: none;
+	
+}
+/*.main selected{*/
+    /*position: relative;*/
+    /*background-color: #F2F2F2;*/
+    /*z-index: 6;*/
+/*}*/
+.products .main.selected {
+    display: block;
+}
+.products .main a{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 20px;
+    bottom:0;
+    top: 0;
+    right: 0;
+    margin:auto;
+    background: #33911b;
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 20px;
+    z-index: 999;
+}
+/*.add_news{*/
+    /*background-color: #ccc;*/
+/*}*/
+
+
+.tab li.active {
+    border-color: #8A5691;
+    border-bottom: 0;
+}
+.xs_contentI{
+    width: 845px;
+    height: 206px;
+    padding-top: 19px;
+    padding-left: 32px;
+    position: relative;
+    border-bottom: 1px solid #F2F2F2;
+
+}
+.xs_contentI h1{
+    font-size: 30px;
+    float-color:#000;
+    position: absolute;
+    top: 20px;
+    left: 370px;
+}
+
+.xs_contentI h2{
+    height: 20px;
+    width:260px ;
+    position: absolute;
+    top: 80px;
+    left: 380px;
+    font-color:#ddd;
+}
+.xs_contentI span{
+    display: block;
+    height: 20px;
+    position: absolute;
+    left: 380px;
+    top: 120px;
+    font-size: 20px;
+}
+.xs_contentII{
+    width: 845px;
+    height: 206px;
+    padding-top: 19px;
+    padding-left: 32px;
+    position: relative;
+    border-bottom: 1px solid #F2F2F2;
+}
+.xs_contentII h1{
+    font-size: 30px;
+    float-color:#000;
+    position: absolute;
+    top: 20px;
+    left: 370px;
+}
+
+.xs_contentII h2{
+    height: 20px;
+    width:260px ;
+    position: absolute;
+    top: 80px;
+    left: 380px;
+    font-color:#ddd;
+}
+.xs_contentII span{
+    display: block;
+    height: 20px;
+    position: absolute;
+    left: 380px;
+    top: 120px;
+    font-size: 20px;
+}
+/*.small{*/
+    /*float: left;*/
+    /*width:805px;*/
+    /*height: 20px;*/
+    /*position: absolute;*/
+    /*z-index: 99;*/
+    /*background-color: #F2F2F2;*/
+/*}*/
+.xs_contentIII{
+    width: 805px;
+    height: 206px;
+    padding-top: 19px;
+    padding-left: 32px;
+    padding-right: 40px;
+    position: relative;
+    border-bottom: 1px solid #F2F2F2;
+}
+.xs_contentIII h1{
+    font-size: 30px;
+    position: absolute;
+    float-color:#000;
+    top: 20px;
+    left: 370px;
+}
+.xs_contentIII h2{
+    height: 20px;
+    width:260px ;
+    position: absolute;
+    top: 80px;
+    left: 380px;
+}
+
+
+
+
+
+
+
+
+/*推荐*/
+.xs_recommend{
+    float: right;
+    width: 285px;
+    height: 235px;
+    background-color: #fff;
+
+
+
+}
+.xs_spI {
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.xs_border{
+    height:15px;
+    width:150px;
+    border-bottom: 1px dashed #cfcfcf;
+    position: relative;
+    left: 70px;
+}
+
+.xs_recommend ol{
+    font-size: 15px;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+.xs_br{
+    width: 285px;
+    height: 80px;
+    background-color: #ffffff;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    float: right;
+}
+
+
+.xs_spII{
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.xs_borderII{
+    height:15px;
+    width:150px;
+    border-bottom: 1px dashed #cfcfcf;
+    position: relative;
+    left: 70px;
+}
+.xs_ask{
+    width: 285px;
+    height: 235px;
+    background-color: #fff;
+    margin-top: 20px;
+    position: absolute;
+    top: 323px;
+    right: 0;
+}
+
+.xs_spIII {
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.xs_borderIII{
+    height:15px;
+    width:150px;
+    border-bottom: 1px dashed #cfcfcf;
+    position: relative;
+    left: 70px;
+}
+
+.xs_ask img{
+    height: 128px;
+    width: 240px;
+    position: relative;
+    top: 16px;
+    left: 20px;
+}
+
+.xs_ask a{
+    display: inline-block;
+    width: 240px;
+    height: 35px;
+    background-color: #EF7676;
+    text-align: center;
+    line-height: 35px;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    border-radius: 5px;
+}
+/*.xs_bigboxII{*/
+
+/*}*/

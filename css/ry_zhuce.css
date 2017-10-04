@@ -1,0 +1,546 @@
+body{
+    width:100%;
+    height:100%;
+    background-color:#ccc;
+}
+.ry_yincang{
+    display:none!important;
+}
+.ry_xianshi{
+    display:block!important;
+}
+.ry_header{
+    background-color: #fff;
+    border-bottom:1px solid #703987;
+    margin-bottom:13px;
+    box-shadow:0 1px 0 #fff;
+}
+.ry{
+    position:relative;
+    height:97px;
+}
+.ry_logo{
+    width:100px;
+    height:100%;
+    float:left;
+    background:url(../images/logo.png) center left no-repeat ;
+}
+.ry_word{
+    width:296px;
+    height:100%;
+    float:left;
+    background:url(../images/ad-word.png) center left no-repeat;
+}
+.ry_tools{
+    width:415px;
+    height:100%;
+    float:right;
+    background:url(../images/top-bg.png) top center no-repeat;
+}
+.ry_tools .ry_btn{
+    display:inline-block;
+    width:90px;
+    height:36px;
+    line-height:36px;
+    float:right;
+    margin-top:30px;
+    background-color:#b7aeda;
+    color:#fff;
+    border-radius:1px;
+    text-align:center;
+    font-size:16px;
+    text-decoration:none;
+}
+/*��ߺ���*/
+.ry_left{
+    width:880px;
+    height:885px;
+    float:left;
+    background-color:#fff;
+    position:relative;
+}
+.ry_left .ry_in{
+    border:1px solid #e6e6e6;
+    padding:0px 19px 140px 19px;
+    border-radius:3px;
+    overflow:hidden;
+    background:url(../images/bg.png) left bottom no-repeat;
+    /*background-color:lightgreen;*/
+}
+.ry_title{
+    border-bottom:1px solid #D2D2D2;
+    height:46px;
+    line-height:46px;
+    margin-bottom:20px;
+}
+.ry_title h2{
+    line-height:46px;
+    font-weight:400;
+    padding-left:25px;
+    font-size:18px;
+    float:left;
+    color:#333;
+    font-family:"����";
+}
+.ry_box{
+    margin:0px 15px;
+    height:36px;
+    line-height:36px;
+    margin-bottom:14px;
+}
+.ry_box label{
+    font-weight:700;
+    float:left;
+    margin-right:10px;
+    text-align:right;
+    width:100px;
+    display:inline-block;
+    font-family:"΢���ź�";
+}
+.ry_genery a{
+    display:inline-block;
+    float:left;
+    height:36px;
+    margin-right:8px;
+}
+.ry_checkform{
+    display:inline-block;
+    float:left;
+    width:206px;
+    height:24px;
+    line-height:24px;
+    border-radius:2px;
+    font-size:12px;
+    margin-left:20px;
+    margin-top:6px;
+    position:relative;
+    background-color: #dfdfdf;
+    display:none;
+}
+.ry_checkform i{
+    display:inline-block;
+    width:16px;
+    height:24px;
+    float:left;
+    background:url(../images/check-icon.png) no-repeat ;
+    margin-left:5px;
+}
+.ry_checkform_right{
+    display:inline-block;
+    float:left;
+    width:206px;
+    height:24px;
+    line-height:24px;
+    border-radius:2px;
+    font-size:12px;
+    margin-left:20px;
+    margin-top:6px;
+    position:relative;
+    background-color: #fff;
+    display:none;
+}
+.ry_checkform_right i{
+    display:inline-block;
+    width:16px;
+    height:24px;
+    float:left;
+    background:url(../images/check-icon.png) no-repeat bottom;
+    margin-left:5px;
+}
+.ry_select{
+    width:315px;
+    height:36px;
+    line-height:36px;
+    float:left;
+}
+.ry_select dl{
+    width:80px;
+    float:left;
+    height:36px;
+    position:relative;
+
+}
+.ry_select dt{
+    border:1px solid #C9C9C9;
+    width:73px;
+    height:34px;
+    line-height:34px;
+    padding-left:5px;
+    display:block;
+    position:absolute;
+}
+.ry_select span{
+    display:inline-block;
+    height:36px;
+    float:left;
+    padding:0px 5px;
+}
+.ry_year dd{
+    width:480px;
+    height:162px;
+    border:1px solid #C9C9C9;
+    padding:5px;
+    top:35px;
+    position:absolute;
+    background-color:#fff;
+    z-index:10;
+}
+.ry_year dd i {
+    font-style:normal;
+    font-weight:700;
+}
+.ry_year dd a{
+    display:inline-block;
+    width:33px;
+    padding:1px 2px;
+    text-align:center;
+    border-radius:2px;
+    line-height:26px;
+    color:#000;
+}
+.ry_year dd a:hover{
+    background-color: pink;
+    color:#fff;
+}
+.ry_month dd{
+    width:276px;
+    height:128px;
+    border:1px solid #C9C9C9;
+    padding:5px;
+    left:-104px;
+    top:35px;
+    position:absolute;
+    background-color:#fff;
+    z-index:10;
+}
+.ry_month dd a{
+    display:inline-block;
+    width:33px;
+    padding:1px 2px;
+    text-align:center;
+    border-radius:2px;
+    line-height:26px;
+    color:#000;
+}
+.ry_month dd a:hover {
+    background-color: pink;
+    color: #fff;
+}
+.ry_day dd{
+    width:276px;
+    height:136px;
+    border:1px solid #C9C9C9;
+    padding:5px;
+    left:-208px;
+    top:35px;
+    position:absolute;
+    background-color:#fff;
+    z-index:10;
+    display: none;
+}
+.ry_day dd a{
+    display:inline-block;
+    width:33px;
+    padding:1px 2px;
+    text-align:center;
+    border-radius:2px;
+    line-height:26px;
+    color:#000;
+}
+.ry_day dd a:hover{
+    background-color: pink;
+    color: #fff;
+}
+.ry_sheng dd{
+    display:none;
+    width:415px;
+    height:195px;
+    border:1px solid #C9C9C9;
+    padding:5px;
+    left:0;
+    top:35px;
+    position:absolute;
+    z-index:1;
+    background-color: #fff;
+}
+.ry_sheng dd span{
+    display:inline-block;
+    width:46px;
+    height:36px;
+    line-height:34px;
+    text-align:left;
+    float:left;
+    padding:0 5px;
+}
+.ry_sheng dd a{
+    display:inline;
+    border:0;
+    text-decoration:none;
+    padding:1px 2px;
+    text-align:center;
+    border-radius:2px;
+    color:#000;
+}
+.ry_sheng dd a:hover{
+    background-color:pink;
+    color:#fff;
+}
+.ry_sheng .border{
+    height:1px;
+    border-bottom:1px dashed #ccc;
+    clear:both;
+    overflow:hidden;
+}
+.ry_qu dd{
+    display:none;
+    width:415px;
+    height:195px;
+    border:1px solid #C9C9C9;
+    padding:5px;
+    left:-104px;
+    top:35px;
+    position:absolute;
+    z-index:1;
+    background-color: #fff;
+}
+.ry_qu dd a{
+    display:inline;
+    border:0;
+    text-decoration:none;
+    padding:1px 2px;
+    text-align:center;
+    border-radius:2px;
+    color:#000;
+}
+.ry_qu dd a:hover{
+    background-color:pink;
+    color:#fff;
+}
+.ry_xian dd{
+    display:none;
+    width:415px;
+    height:195px;
+    border:1px solid #C9C9C9;
+    padding:5px;
+    left:-208px;
+    top:35px;
+    position:absolute;
+    z-index:1;
+    background-color: #fff;
+}
+.ry_label{
+    display:block;
+    width:14px;
+}
+.ry_marry a{
+    display:inline-block;
+    float:left;
+    height:36px;
+    margin-right:8px;
+}
+.ry_ruler{
+    width:445px;
+    height:36px;
+    background-image:url(../images/height-ruler.png);
+    float:left;
+    cursor:pointer;
+}
+.ry_xueli{
+    width:162px;
+    height:36px;
+    float:left;
+    position:relative;
+}
+.ry_xueli dt{
+    height:34px;
+    line-height:34px;
+    border:1px solid #C9C9C9;
+    padding-left:5px;
+}
+.ry_xueli dd{
+    display:none;
+    width:160px;
+    height:130px;
+    border:1px solid #C9C9C9;
+    position:absolute;
+    z-index:2;
+    background-color: #fff;
+    left:0;
+    top:35px;
+}
+.ry_xueli dd a{
+    height:22px;
+    line-height:22px;
+    display:block;
+}
+.ry_xueli dd a:hover{
+    color:#fff;
+    background-color: skyblue;
+}
+.ry_yuexin{
+    width:162px;
+    height:36px;
+    float:left;
+    position:relative;
+}
+.ry_yuexin dt{
+    height:34px;
+    line-height:34px;
+    border:1px solid #C9C9C9;
+    padding-left:5px;
+}
+.ry_yuexin dd{
+    display:none;
+    width:160px;
+    height:175px;
+    border:1px solid #C9C9C9;
+    position:absolute;
+    z-index:2;
+    background-color: #fff;
+    left:0;
+    top:35px;
+}
+.ry_yuexin dd a{
+    display:block;
+    height:22px;
+    line-height:22px;
+}
+.ry_yuexin dd a:hover{
+    color:#fff;
+    background-color: skyblue;
+}
+.ry_todayjoin{
+    margin:0px 15px 20px;
+    padding-left:110px;
+    color:#333;
+    font-size:18px;
+    padding-top:25px;
+    font-weight:700;
+    font-family:"Microsoft Yahei";
+}
+.ry_todayjoin span{
+    color:#ff5b5b;
+}
+.ry_input{
+    width:223px;
+    height:34px;
+    float:left;
+    padding-left:5px;
+    line-height:34px;
+    border:1px solid #C9C9C9;
+    color:#333;
+    position:relative;
+    z-index:1;
+}
+.ry_agree{
+    padding-top:10px;
+    padding-left:141px;
+    font-size:12px;
+    color:#666;
+    font-family:sans-serif;
+}
+.ry_agree label{
+    float:left;
+    text-indent:-18px;
+}
+.ry_agree input{
+    height:12px;
+    width:12px;
+    /*position:relative;*/
+    margin-right:2px;
+    vertical-align:-2px;
+}
+.ry_agree a{
+    color:#007bc2;
+    text-decoration:underline;
+}
+.ry_btn{
+    width:260px;
+    height:50px;
+    background-color:#ff6060;
+    cursor:pointer;
+    margin-top:35px;
+    margin-left:125px;
+    border:0;
+    font-size:20px;
+    color:#fff;
+    font-family:"Microsoft Yahei";
+    border-radius:1px;
+}
+/*�ұߵĺ���*/
+.ry_right{
+    width:290px;
+    height:800px;
+    background-color:#fff;
+    float:right;
+    position:relative;
+}
+.ry_bar{
+    padding-bottom:15px;
+    border:1px solid #e6e6e6;
+    background-color: #fff;
+    border-radius:3px;
+}
+.ry_bar_about{
+    padding-bottom:25px;
+}
+.ry_bar_about img{
+    width:100%;
+    border:0;
+}
+.ry_bar_about dl{
+    padding:15px 8% 0 10%;
+    font-size:12px;
+    line-height:1.5;
+    color:#333;
+    font-family:"Microsoft Yahei";
+}
+.ry_bar_about dt{
+    font-size:18px;
+    font-weight:700;
+    color:#636363;
+}
+.ry_bar_about dt strong{
+    color:#b4bfe4;
+    line-height:36px;
+    font-size:28px;
+    font-family:"arial";
+}
+.ry_bar_about dd{
+    font-size:14px;
+    color:#535353;
+    line-height:1.5;
+    font-family:"Microsoft Yahei";
+}
+.ry_more_logins{
+    margin:0 18px;
+    border-top:1px dashed #dfdfdf;
+    padding-left:7px;
+    padding-top:15px;
+}
+.ry_more_logins h2{
+    font-size:14px;
+    padding-bottom:15px;
+    line-height:1.5;
+    color:#333;
+    font-family:"Microsoft Yahei";
+}
+.ry_more_logins ul{
+    display:inline-block;
+}
+.ry_more_logins ul li{
+    width:46%;
+    float:left;
+    height:18px;
+    line-height:18px;
+    margin-bottom:8px;
+}
+.ry_more_logins ul li a{
+    font-size:12px;
+    line-height:18px;
+    font-family:"Microsoft Yahei";
+}
+.ry_more_logins ul li a:hover{
+    color:#FF6000;
+    text-decoration:underline;
+}

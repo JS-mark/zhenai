@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+    <link rel="stylesheet" type="text/css" href="./../css/base.css">
+    <link rel="stylesheet" type="text/css" href="./../css/details.css">
+    <link href="./../favicon.ico" type="image/x-icon" rel="icon" />
+    <link rel="stylesheet" href="./../css/public.css">
+    <link rel="stylesheet" href="./../font/iconfont.css">
+    <script src="./../js/plugin/jquery-1.11.1.js"></script>
+    <script src="./../js/plugin/sd_tools.js"></script>
+    <script src="./../js/dbling_24.js"></script>
+    <!--&lt;!&ndash;tab栏切换&ndash;&gt;-->
+    <!--<script>-->
+        <!--$(window).load(function () {-->
+            <!--//鼠标进入哪个li，该li就应该添加active类;-->
+            <!--//对应索引值的div就应该添加selected类;其他的去除;-->
+            <!--$(".info_tab ul>li").click(function () {-->
+                <!--//当前的li设置active,其他的去除active-->
+                <!--$(this).addClass("active").siblings("li").removeClass("active");-->
+                <!--//对应索引值得div添加selected,其他的去除selected;-->
+                <!--$(".main").eq($(this).index()).addClass("selected").siblings("div").removeClass("selected");-->
+            <!--});-->
+        <!--});-->
+
+    <!--</script>-->
+    <!--&lt;!&ndash;固定导航栏&ndash;&gt;-->
+    <!--<script>-->
+        <!--//涉及图片一般使用window.onload入口函数;-->
+        <!--jQuery(window).load(function () {-->
+            <!--$(window).scroll(function () {-->
+                <!--//判断：页面被卷去的部分和第一个盒子的高-->
+                <!--if($(window).scrollTop() >= $(".header").height()){-->
+                    <!--//fixed_tab加属性display:block-->
+                    <!--$(".fixed_tab").stop().slideDown(1000);-->
+<!--//                    $(".up_details").hide();-->
+                    <!--$(".up_details").css({"padding-top":$(".fixed_tab").height()});-->
+                    <!--$(".header").hide();-->
+                <!--}else {-->
+                    <!--$(".fixed_tab").hide();-->
+                    <!--$(".up_details").show();-->
+                    <!--$(".header").show();-->
+                    <!--$(".up_details").css({"padding-top":0});-->
+                <!--}-->
+            <!--});-->
+        <!--})-->
+    <!--</script>-->
+    <!--放大镜-->
+    <!--<script>-->
+        <!--window.onload = function () {-->
+            <!--//鼠标进入显示mask和big;移开隐藏;-->
+            <!--//鼠标在small上移动，mask盒子跟随移动;-->
+            <!--//big盒子里面的图片等比例移动;-->
+
+
+            <!--//鼠标进入显示mask和big;移开隐藏;-->
+            <!--var photo = document.getElementById("photo");-->
+            <!--var small = photo.firstElementChild || photo.firstChild;-->
+            <!--var mask = small.children[1];-->
+            <!--var big = small.nextElementSibling || small.nextSibling;-->
+            <!--var bigImg = big.lastElementChild || big.lastChild;-->
+
+            <!--//鼠标进入显示mask和big;移开隐藏-->
+            <!--//small比较好，如果是box那么鼠标进入big也会显示;-->
+            <!--small.onmouseenter = function () {-->
+                <!--mask.style.display="block";-->
+                <!--big.style.display="block";-->
+            <!--}-->
+            <!--small.onmouseleave = function () {-->
+                <!--mask.style.display="none";-->
+                <!--big.style.display="none";-->
+            <!--}-->
+            <!--//鼠标在small上移动，mask盒子跟随移动;-->
+            <!--small.onmousemove = function (event) {-->
+                <!--//获取鼠标在small上面的坐标，然后给黄盒子赋值;-->
+                <!--//新七步获取鼠标在盒子中的坐标;-->
+                <!--event = event || window.event;-->
+                <!--var pagex = event.pageX || event.clientX + scroll().left;-->
+                <!--var pagey = event.pageY || event.clientY + scroll().top;-->
+                <!--//因为大盒子有定位，而且和small几乎重合，所以直接用大盒子;-->
+                <!--var smallx = photo.offsetLeft;-->
+                <!--var smally = photo.offsetTop;-->
+                <!--//为了让鼠标在黄盒子的最中间，获取值的时候减去盒子宽高的一半儿;-->
+                <!--var x = pagex - smallx - mask.offsetWidth/2;-->
+                <!--var y = pagey - smally - mask.offsetHeight/2;-->
+
+                <!--//黄盒子的坐标不能随意赋值要有界限！[0,small宽-mask宽]-->
+                <!--if(x<0){-->
+                    <!--x = 0;//鼠标超出，但是黄盒子不能超出-->
+                <!--}-->
+                <!--if(x>small.offsetWidth-mask.offsetWidth){-->
+                    <!--x = small.offsetWidth-mask.offsetWidth;//鼠标超出，但是黄盒子不能超出-->
+                <!--}-->
+                <!--if(y<0){-->
+                    <!--y = 0;//鼠标超出，但是黄盒子不能超出-->
+                <!--}-->
+                <!--if(y>small.offsetHeight-mask.offsetHeight){-->
+                    <!--y = small.offsetHeight-mask.offsetHeight;//鼠标超出，但是黄盒子不能超出-->
+                <!--}-->
+
+                <!--//给黄盒子赋值;-->
+                <!--mask.style.left = x+"px";-->
+                <!--mask.style.top = y+"px";-->
+
+
+                <!--//需求3: big盒子里面的图片等比例移动;(数学算法)-->
+                <!--//比例1：大图片走的距离/黄盒子走的距离 = 大图片/小图片-->
+                <!--var bili = bigImg.offsetWidth/small.offsetWidth;-->
+                <!--//比例2：大图片走的距离/黄盒子走的距离 = (大图片-大盒子)/(小盒子-黄盒子);-->
+<!--//                var bili = (bigImg.offsetWidth-big.offsetWidth)/(small.offsetWidth-mask.offsetWidth);-->
+
+                <!--//通过比例获取大图片应该走过的距离-->
+                <!--var xx = bili*x;-->
+                <!--var yy = bili*y;-->
+                <!--//为大图片赋值;(应该设置top/left值，但是图片没有定位)-->
+                <!--bigImg.style.marginTop = -yy+"px";-->
+                <!--bigImg.style.marginLeft = -xx+"px";-->
+            <!--}-->
+        <!--}-->
+    <!--</script>-->
+</head>
+<body>
+<!--头-->
+<div class="header">
+    <!--详情导航开始-->
+    <div class="sd_mainNav w">
+        <div class="w">
+        <div class="sd_left" id="sd_mainNav">
+        <ul>
+        <li><a href="javascript:void(0);">我的珍爱</a></li>
+        <li><a href="javascript:void(0);">搜索</a></li>
+        <li><a href="javascript:void(0);">直营门店</a></li>
+        <li><a href="javascript:void(0);">珍心会员</a></li>
+        <li><a href="javascript:void(0);">成功故事</a></li>
+        <li><a href="javascript:void(0);">他她说</a></li>
+        </ul>
+        </div>
+        <div class="sd_right">
+        <ul>
+        <li><a href="javascript:void(0);" class="iconfont">&#xe502;</a></li>
+        <li><a href="javascript:void(0);" class="iconfont">&#xe652;</a></li>
+        <li><a href="javascript:void(0);" class="iconfont">&#xe637;</a></li>
+        </ul>
+        </div>
+        </div>
+    </div>
+    <!--详情导航结束-->
+</div>
+<ul id="sd_bottom_nav">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<!--固定导航栏-->
+<div class="fixed_tab w">
+    <div class="fixed_tab_content">
+        <div class="ftc_photo"></div>
+        <ul>
+            <li><h1>开心果</h1><p>27岁，天津，164cm，5001-8000元</p></li>
+            <li>
+                <a>发邮件</a>
+                <a>打招呼</a>
+                <a>问问题</a>
+                <a>委托红娘</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--详情页版面-->
+<div class="details w">
+    <!--详情页版面上-->
+    <div class="up_details">
+        <!--详情页版面上___放大镜区域-->
+        <div class="photo" id="photo">
+            <!--左侧盒子-->
+            <div class="small" id="small">
+                <img src="./../images/small.png" alt=""/>
+                <!--黄盒子-->
+                <div class="mask" id="mask"></div>
+            </div>
+            <!--右侧盒子-->
+            <div class="big" id="big">
+                <!--大图片-->
+                <img src="./../images/big.png" style="position: absolute;" alt=""/>
+            </div>
+        </div>
+        <!--详情页版面（上）右侧-->
+        <div class="up_details_right">
+            <!--详情页版面（上）右侧上-->
+            <div class="up_details_right_top">
+                <p class="p1">
+                    <a class="happy_apple">开心果</a>
+                    <a class="vip"></a>
+                    <a class="mobile"></a>
+                    <a class="iden"></a>
+                    <a class="credit">718分</a>
+                </p>
+                <p class="p2">ID:107469852
+                    <span class="p2_span">诚信值：
+                        <span class="red">15</span>
+                    </span>
+                    <span class="p2_span">魅力值：
+                        <span class=red>113</span>
+                    </span>
+                    <a class=login_time>查看最后登录时间</a>
+                </p>
+            </div>
+            <!--详情页版面（上）右侧中-->
+            <div class="up_details_right_mid">
+               <div class="up_details_right_mid_content">
+                   <ul>
+                       <li>
+                           <span class=udrmc_span>
+                                <span class="span_a">年龄：</span>
+                                <span class="bspan_">27岁</span>
+                         </span>
+                           <span class=udrmc_span>
+                               <span class="span_a">身高：</span>
+                               <span class="bspan_">164CM</span>
+                           </span>
+                           <span class=udrmc_span>
+                                <span class="span_a">月收入：</span>
+                                <span class="bspan_">5000-8000</span>
+                           </span>
+                       </li>
+                       <li>
+                            <span class=udrmc_span>
+                                <span class="span_a">婚况：</span>
+                                <span class="bspan_">未婚</span>
+                         </span>
+                           <span class=udrmc_span>
+                               <span class="span_a">学历：</span>
+                               <span class="bspan_">本科</span>
+                           </span>
+                           <span class=udrmc_span>
+                                <span class="span_a">工作地：</span>
+                                <span class="bspan_">天津滨海新区</span>
+                           </span>
+                       </li>
+                       <li>
+                           <span class=udrmc_span>
+                                <span class="span_a">职业：</span>
+                                <span class="bspan_">IT工程师</span>
+                         </span>
+                           <span class=udrmc_span>
+                               <span class="span_a">星座：</span>
+                               <span class="bspan_">巨蟹座</span>
+                           </span>
+                           <span class=udrmc_span>
+                                <span class="span_a">籍贯：</span>
+                                <span class="bspan_">河北沧州</span>
+                           </span>
+                       </li>
+                   </ul>
+               </div>
+            </div>
+            <!--详情页版面（上）右侧下-->
+            <div class="up_details_right_bot">
+                <div class="udrb_top">
+                    <a>发邮件</a>
+                    <a>打招呼</a>
+                    <a>问问题</a>
+                    <a>委托红娘</a>
+                </div>
+                <div class="udrb_bot">
+                    <sapn class="udrb_bot_span_a"></sapn>
+                    <sapn class="udrb_bot_span_b"></sapn>
+                    <sapn class="udrb_bot_span_c"></sapn>
+                    <sapn class="udrb_bot_span_d"></sapn>
+                    <sapn class="udrb_bot_span_e"></sapn>
+                    <a class="icon_group_a">关注</a>
+                    <a class="icon_group_b">送礼物</a>
+                    <a class="icon_group_c">在线聊天</a>
+                    <a class="icon_group_d">情敌动态</a>
+                    <a class="icon_group_e">举报/拉黑</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--详情页版面下-->
+    <div class="dowm_details">
+        <div class="info_tab">
+            <ul>
+                <li class="active">内心独白</li>
+                <li>自我描述</li>
+            </ul>
+            <div class="info_text">
+
+                <div class="main selected">
+                    <span class="span_a"></span>
+                    <span class="span_b"></span>
+                    <p>没有该结婚的年龄，只有该结婚的感情!<br>
+                        一辈子真的很长，所以我真的不想凑合～</p>
+                </div>
+                <div class="main">
+                    <span class="span_c"></span>
+                    <span class="span_d"></span>
+                    <p>想要听听TA对自己的想法？<a>来邀请TA补充自我描述吧</a></p>
+                </div>
+            </div>
+            <div class="good_job_box">
+                <a class="gj_w">赞一下</a>
+                <a class="gj_p"></a>
+            </div>
+        </div>
+        <!--详细信息-->
+        <div class="details_info">
+            <div class="left">
+                <span></span>
+                <p>详细资料</p>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">性别：</span>
+                            <span class="span2">女</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">生肖：</span>
+                            <span class="span2">马</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                        <span class="span1">身高：</span>
+                        <span class="span2">164CM</span>
+                    </p>
+                        <p class="p2">
+                            <span class="span1">星座：</span>
+                            <span class="span2">巨蟹座</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">体重：</span>
+                            <span class="span2">56KG</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">血型：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">体型：</span>
+                            <span class="span2">一般</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">职业：</span>
+                            <span class="span2">IT工程师</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">名族：</span>
+                            <span class="span2">汉族</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">公司：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">信仰：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--生活状况-->
+        <div class="living_condition">
+            <div class="left">
+                <span></span>
+                <p>生活状况</p>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">住房条件：</span>
+                            <span class="span2">和家人同住</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">想何时结婚：</span>
+                            <span class="span2">时机成熟就结婚</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">是否购车：</span>
+                            <span class="span2">未购车</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">婚后与父母住吗：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">是否吸烟：</span>
+                            <span class="span2">不吸烟</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">与对方父母同住：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">是否喝酒：</span>
+                            <span class="span2">不喝酒</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">较大的消费：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">厨艺：</span>
+                            <span class="span2">--</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">喜欢怎样的约会：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">家务：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--兴趣爱好-->
+        <div class="hobbies">
+            <div class="left">
+                <span></span>
+                <p>兴趣爱好</p>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">喜欢的活动：</span>
+                            <span class="span2">--</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">喜欢的食物：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">喜欢的体育运动：</span>
+                            <span class="span2">--</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">喜欢的地方：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">喜欢的音乐：</span>
+                            <span class="span2">--</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">喜欢的宠物：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">喜欢的影视节目：</span>
+                            <span class="span2">--</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--择偶条件-->
+        <div class="chance_condition">
+            <div class="left">
+                <span></span>
+                <p>择偶条件</p>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">性别：</span>
+                            <span class="span2">男</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">体型：</span>
+                            <span class="span2">一般</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">年龄：</span>
+                            <span class="span2">27 - 30岁</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">职业：</span>
+                            <span class="span2">不限</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">身高：</span>
+                            <span class="span2">175 - 185厘米</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">是否抽烟：</span>
+                            <span class="span2">不吸烟</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">学历：</span>
+                            <span class="span2">大学本科</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">是否喝酒：</span>
+                            <span class="span2">不限</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">月收入：</span>
+                            <span class="span2">8000元以上</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">有没有孩子：</span>
+                            <span class="span2">没有</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">婚况： </span>
+                            <span class="span2">未婚</span>
+                         </p>
+                        <p class="p2">
+                            <span class="span1">是否想要孩子：</span>
+                            <span class="span2">想要孩子</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="p1">
+                            <span class="span1">工作地区：</span>
+                            <span class="span2">天津滨海新区</span>
+                        </p>
+                        <p class="p2">
+                            <span class="span1">是否有照片：</span>
+                            <span class="span2">有</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dowm_details_info_bot clearfix2"><a>TA的资完整度只有55%，邀请他完善资料</a></div>
+    </div>
+</div>
+<!--脚-->
+<div class="footer">
+    <iframe src="public_footer.html"  frameborder="0" scrolling="no" width="100%" height="241" ></iframe>
+</div>
+</body>
+</html>
