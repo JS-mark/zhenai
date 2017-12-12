@@ -184,6 +184,8 @@ html,body {
     top: 0;
     left: 0;
     overflow: hidden;
+    width:100%;
+    heigth:100%;
 }
 /*背景视频结束*/
 .sd_mask {
