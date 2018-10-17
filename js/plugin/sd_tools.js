@@ -17,53 +17,53 @@
          *voice：是否禁用视频声音布尔值
          */
         // jQuery方法
-        // "Bvideo" : function (videoEle,src,voice) {
-        //     var newVideo = $("<video></video>");
-        //     var newSource = $("<source></source>");
-        //     $(videoEle).append(newVideo);
-        //     $(newVideo).attr({
-        //         autoplay : "autoplay",
-        //         loop : "loop",
-        //         defaultMuted : voice || false
-        //     });
-        //     $(newVideo).append(newSource);
-        //     $(newSource).attr({
-        //         src: src + '.mp4',
-        //         type: 'video/mp4'
-        //     },
-        //     {
-        //         src: src + '.webm',
-        //         type: 'video/webm;codecs="vp8, vorbis"'
-        //     });
-        //     $(newVideo).addClass("sd_video");
-        // },
-        //原生js写法
         "Bvideo" : function (videoEle,src,voice) {
-            var Video = document.createElement ("video");
-            var Source = document.createElement ("source");
-            if(videoEle.charAt(0) === "#"){
-                var newVideoEle = document.getElementById(videoEle.slice(1));
-            }else if(videoEle.charAt(0) === "."){
-                var newVideoEle = document.getElementById(videoEle.slice(1));
-            }else {
-                var newVideoEle = document.getElementsByTagName(videoEle)[0]
-            }
-            var beforeEle = newVideoEle.getElementsByClassName("fp-tableCell")[0];
-            newVideoEle.insertBefore(Video,beforeEle);
-            var newVideo = document.getElementsByTagName("video")[0];
-            newVideo.appendChild (Source);
-            var newSource = newVideo.getElementsByTagName("source")[0];
-            var obj = {
-                "autoplay" : "autoplay",
-                "loop" : "loop",
-                "defaultMuted" : voice || "false"
-            };
-            for(var i in obj){
-                newVideo.setAttribute (i,obj[i]);
-            }
-            newSource.setAttribute ("src",src + '.mp4');
-            newVideo.className = "sd_video";
+            var newVideo = $("<video></video>");
+            var newSource = $("<source></source>");
+            $(videoEle).append(newVideo);
+            $(newVideo).attr({
+                autoplay : "autoplay",
+                loop : "loop",
+                defaultMuted : voice || false
+            });
+            $(newVideo).append(newSource);
+            $(newSource).attr({
+                src: src + '.mp4',
+                type: 'video/mp4'
+            },
+            {
+                src: src + '.webm',
+                type: 'video/webm;codecs="vp8, vorbis"'
+            });
+            $(newVideo).addClass("sd_video");
         },
+        //原生js写法
+        // "Bvideo" : function (videoEle,src,voice) {
+        //     var Video = document.createElement ("video");
+        //     var Source = document.createElement ("source");
+        //     if(videoEle.charAt(0) === "#"){
+        //         var newVideoEle = document.getElementById(videoEle.slice(1));
+        //     }else if(videoEle.charAt(0) === "."){
+        //         var newVideoEle = document.getElementById(videoEle.slice(1));
+        //     }else {
+        //         var newVideoEle = document.getElementsByTagName(videoEle)[0]
+        //     }
+        //     var beforeEle = newVideoEle.getElementsByClassName("fp-tableCell")[0];
+        //     newVideoEle.insertBefore(Video,beforeEle);
+        //     var newVideo = document.getElementsByTagName("video")[0];
+        //     newVideo.appendChild (Source);
+        //     var newSource = newVideo.getElementsByTagName("source")[0];
+        //     var obj = {
+        //         "autoplay" : "autoplay",
+        //         "loop" : "loop",
+        //         "defaultMuted" : voice || "false"
+        //     };
+        //     for(var i in obj){
+        //         newVideo.setAttribute (i,obj[i]);
+        //     }
+        //     newSource.setAttribute ("src",src + '.mp4');
+        //     newVideo.className = "sd_video";
+        // },
         //滑动导航jQuery写法
         "Nav" : function (ele,backgroundColor) {
             $(ele).append($("<p></p>")).parent().parent().parent().css({"background-color":backgroundColor});
